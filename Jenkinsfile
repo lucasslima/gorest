@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'go build'
+                sh 'go build -o JenkinsGHTesting'
             }
         }
         stage('Test'){
