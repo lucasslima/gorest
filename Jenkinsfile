@@ -2,16 +2,17 @@ pipeline {
     agent {
         docker { image 'golang:alpine' }
     }
-    environment {
-        GO_ENABLED = 0
-    }
+
     stages {
         stage('Build') {
             steps {
                 sh 'go build'
             }
         }
-        stage('Test'){ 
+        stage('Test'){
+            environment {
+              GO_ENABLED = 0
+            }
             steps { 
                 sh 'go test'
             }
