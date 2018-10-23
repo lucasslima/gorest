@@ -24,8 +24,8 @@ pipeline {
                     def uploadSpec = """{
                         "files": [
                             {
-                                "pattern": "my_simple_http",
-                                "target": "DEV/my_simple_http/"
+                                "pattern": "./JenkinsGHTesting",
+                                "target": "DEV/"
                             }
                         ]
                     }"""
