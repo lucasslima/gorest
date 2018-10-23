@@ -1,6 +1,9 @@
 pipeline {
     agent {
         docker { image 'golang:alpine' }
+        environment {
+           CGO_ENABLED = 0
+        }
     }
     stages {
         stage('Build') {
