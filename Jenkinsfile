@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             environment {
-              GO_ENABLED = 0
+              CGO_ENABLED = 0
             }
             steps { 
                 sh 'go test'
