@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    tool name: 'Automatic Go.', type: 'go'
+    tools {
+        go 'Automatic Go.'
+    }
     stages {
         stage('Build') {
             steps {
